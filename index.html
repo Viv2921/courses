@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+    .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  #cart{
+    border: 1px solid black;
+    width: 90%;
+      }
+</style>
+</head>
+<body>
+
+
+
+
+
+
+<div class="grid-container">
+  <div class="grid-item">Course 1<div><button onclick="add()">Add To Cart</button><br><button onclick="del()">Delete from cart</button></div></div>
+  <div class="grid-item">Course 2<div><button onclick="add1()">Add To Cart</button><br><button onclick="del1()">Delete from cart</button></div></div>
+  <div class="grid-item">Course 3<div><button onclick="add2()">Add To Cart</button><br><button onclick="del2()">Delete from cart</button></div></div>  
+  <div class="grid-item">Course 4<div><button onclick="add3()">Add To Cart</button><br><button onclick="del3()">Delete from cart</button></div></div>
+  <div class="grid-item">Course 5<div><button onclick="add4()">Add To Cart</button><br><button onclick="del4()">Delete from cart</button></div></div>
+  <div class="grid-item">Course 6<div><button onclick="add5()">Add To Cart</button><br><button onclick="del5()">Delete from cart</button></div></div>  
+  <div class="grid-item">Course 7<div><button onclick="add6()">Add To Cart</button><br><button onclick="del6()">Delete from cart</button></div></div>
+  <div class="grid-item">Course 8<div><button onclick="add7()">Add To Cart</button><br><button onclick="del7()">Delete from cart</button></div></div>
+  <div class="grid-item">Course 9<div><button onclick="add8()">Add To Cart</button><br><button onclick="del8()">Delete from cart</button></div></div>  
+</div>
+
+<div id="cart"><img src="./cart11.png" alt="" style="width: 40px;">Cart
+    <p id="demo" ></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    
+
+
+</div>
+<script>
+    function add(){
+        var dbutton=document.createElement('button');
+        dbutton.innerText='delete';
+        document.getElementById("demo").innerHTML="Course 1 - added to cart" 
+       // document.getElementById("demo").innerHTML=Date
+       
+      
+        button.addEventListener('click',()=>{
+            var dess=document.getElementById("demo")
+        dess.remove();
+        })
+    
+    }
+    function add1(){
+        document.getElementById("demo1").innerHTML="Course 2"
+       
+    }
+    function add2(){
+        document.getElementById("demo2").innerHTML="Course 3"
+       
+    }
+    function add3(){
+        document.getElementById("demo3").innerHTML="Course 4"
+       
+    }
+    function add4(){
+        document.getElementById("demo4").innerHTML="Course 5"
+       
+    }
+    function add5(){
+        document.getElementById("demo5").innerHTML="Course 6"
+       
+    }
+    function add6(){
+        document.getElementById("demo6").innerHTML="Course 7"
+       
+    }
+    function add7(){
+        document.getElementById("demo7").innerHTML="Course 8"
+       
+    }
+    function add8(){
+        document.getElementById("demo8").innerHTML="Course 9"
+       
+    }
+
+     function del(){
+        var dess=document.getElementById("demo")
+        dess.remove();
+    }
+    function del1(){
+        var des=document.getElementById("demo1")
+        des.remove();
+    }
+    function del2(){
+        var dess=document.getElementById("demo2")
+        dess.remove();
+    }
+    function del3(){
+        var dess=document.getElementById("demo3")
+        dess.remove();
+    }
+
+    function del4(){
+        var dess=document.getElementById("demo4")
+        dess.remove();
+    }
+    function del5(){
+        var dess=document.getElementById("demo5")
+        dess.remove();
+    }
+    function del6(){
+        var dess=document.getElementById("demo6")
+        dess.remove();
+    }
+    function del7(){
+        var dess=document.getElementById("demo7")
+        dess.remove();
+    }
+    function del8(){
+        var dess=document.getElementById("demo8")
+    dess.remove();
+    } 
+    
+</script>
+</body>
+</html>
