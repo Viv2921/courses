@@ -51,11 +51,7 @@ app.get('/',function(req,res){
     }) 
     const val=await data.save(); 
     res.send(val);
-    /* res.json(val); */
- 
-   
-   
-    
+    /* res.json(val); */   
   })
 
   //from frontend
@@ -113,12 +109,13 @@ app.get('/login',(req,res)=>{
 })
 app.get('/courses',(req,res)=>{
   res.sendFile(path.join(__dirname,'/courses.html'));
+  
 })
 
 app.post('/login',async(req,res)=>{
   
     const name =req.body.name;
-  /*   window.sessionStorage.setItem('test', true); */
+ // sessionStorage.setItem('test', true);
   const password=req.body.loginpassword;
   try{
     const getname= await monmodel.findOne({name: name})

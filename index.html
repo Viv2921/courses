@@ -5,6 +5,7 @@
     <title></title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
     <script>
         window.onload = function () {
             // Variables
@@ -142,7 +143,7 @@
                     var miItem = baseDeDatos.filter(function(itemBaseDatos) {
                         return itemBaseDatos['id'] == item;
                     });
-               
+                   
                     var miNodo = document.createElement('li');
                     miNodo.classList.add('list-group-item', 'text-right');
                     miNodo.textContent = `${miItem[0]['nombre']} - $${miItem[0]['precio']}`;
@@ -152,6 +153,8 @@
                     miBoton.textContent = 'X';
                     miBoton.setAttribute('posicion', indice);
                     miBoton.addEventListener('click', borrarItemCarrito);
+                    
+                    
                     
                     miNodo.appendChild(miBoton);
                     $carrito.appendChild(miNodo);
@@ -166,6 +169,7 @@
                 renderizarCarrito();
           
                 calcularTotal();
+               
             }
 
             function calcularTotal () {
@@ -184,23 +188,28 @@
                 $total.textContent = totalDosDecimales;
             }
            
-            renderItems();
-        } 
+            renderItems();         
+  }
     </script>
 </head>
 <body>
+
+            <h1 style="text-align: center;">Courses</h1><br>
+            
     <div class="container">
         <div class="row">
       
             <main id="items" class="col-sm-8 row"></main>
-       
-            <aside class="col-sm-4">
+       <p >
+            <aside class="col-sm-4"><p></p>
                <img src="./cart11.png" alt=""> <h2>Cart</h2>
              
                 <ul id="carrito" class="list-group"></ul>
                 <hr>
             
                 <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+            </p>
+         
             </aside>
         </div>
     </div>

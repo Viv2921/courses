@@ -112,7 +112,7 @@
                 
                     var miNodoBoton = document.createElement('button');
                     miNodoBoton.classList.add('btn', 'btn-primary');
-                    miNodoBoton.textContent = '+';
+                    miNodoBoton.textContent = '';
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
                   
@@ -189,6 +189,8 @@
     </script>
 </head>
 <body>
+    <br>
+    <h1 style="text-align: center;">Courses</h1><br>
     <div class="container">
         <div class="row">
       
@@ -196,12 +198,12 @@
        
             <aside class="col-sm-4">
                <img src="./cart11.png" alt=""> <h2>Please log in </h2>
-               <a href="./login.html">Login</a>
+               <a href="./login">Login</a>
              
                 <ul id="carrito" class="list-group"></ul>
                 <hr>
             
-                <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+                
                 
             </aside>
         </div>
