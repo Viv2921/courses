@@ -12,7 +12,7 @@
                 {
                     id: 1,
                     nombre: 'Course 1',
-                    precio: 200
+                    precio: 1399
                 },
                 {
                     id: 2,
@@ -22,7 +22,7 @@
                 {
                     id: 3,
                     nombre: 'Course 3',
-                    precio: 400
+                    precio: 948
                 },
                 {
                     id: 4,
@@ -32,12 +32,12 @@
                 {
                     id: 5,
                     nombre: 'Course 5',
-                    precio: 500
+                    precio: 590
                 },
                 {
                     id: 6,
                     nombre: 'Course 6',
-                    precio: 2800
+                    precio: 2890
                 },
                 {
                     id: 7,
@@ -72,7 +72,7 @@
                 {
                     id: 13,
                     nombre: 'Course 13',
-                    precio: 650
+                    precio: 648
                 },
                 {
                     id: 14,
@@ -92,30 +92,30 @@
             var total = 0;
             var $carrito = document.querySelector('#carrito');
             var $total = document.querySelector('#total');
-          
+            // Funciones
             function renderItems () {
                 for (var info of baseDeDatos) {
-                
+                    // Estructura
                     var miNodo = document.createElement('div');
                     miNodo.classList.add('card', 'col-sm-4');
-                  
+                    // Body
                     var miNodoCardBody = document.createElement('div');
                     miNodoCardBody.classList.add('card-body');
-                  
+                    // Titulo
                     var miNodoTitle = document.createElement('h5');
                     miNodoTitle.classList.add('card-title');
                     miNodoTitle.textContent = info['nombre'];
-                  
+                    // Precio
                     var miNodoPrecio = document.createElement('p');
                     miNodoPrecio.classList.add('card-text');
                     miNodoPrecio.textContent = '$' +info['precio'];
-                
+                    // Boton 
                     var miNodoBoton = document.createElement('button');
                     miNodoBoton.classList.add('btn', 'btn-primary');
                     miNodoBoton.textContent = '+';
                     miNodoBoton.setAttribute('marcador', info['id']);
                     miNodoBoton.addEventListener('click', anyadirCarrito);
-                  
+                    // Insertamos
                     miNodoCardBody.appendChild(miNodoTitle);
                     miNodoCardBody.appendChild(miNodoPrecio);
                     miNodoCardBody.appendChild(miNodoBoton);
@@ -124,11 +124,11 @@
                 }
             }
             function anyadirCarrito () {
-              
+                // Anyadimos el Nodo a nuestro carrito
                 carrito.push(this.getAttribute('marcador'))
-             
+                // Calculo el total
                 calcularTotal();
-           
+                // Renderizamos el carrito 
                 renderizarCarrito();
 
             }
@@ -191,15 +191,15 @@
 <body>
     <div class="container">
         <div class="row">
-      
+            <!-- Elementos generados a partir del JSON -->
             <main id="items" class="col-sm-8 row"></main>
-       
+            <!-- Carrito -->
             <aside class="col-sm-4">
-               <img src="./cart11.png" alt=""> <h2>Cart</h2>
-             
+                <h2>Cart</h2>
+                <!-- Elementos del carrito -->
                 <ul id="carrito" class="list-group"></ul>
                 <hr>
-            
+                <!-- Precio total -->
                 <p class="text-right">Total: <span id="total"></span>&dollar;</p>
             </aside>
         </div>

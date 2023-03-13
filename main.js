@@ -111,16 +111,21 @@ app.get('/',function(req,res){
 app.get('/login',(req,res)=>{
   res.sendFile(path.join(__dirname,'/login.html'));
 })
+app.get('/courses',(req,res)=>{
+  res.sendFile(path.join(__dirname,'/courses.html'));
+})
 
 app.post('/login',async(req,res)=>{
   
     const name =req.body.name;
+  /*   window.sessionStorage.setItem('test', true); */
   const password=req.body.loginpassword;
   try{
     const getname= await monmodel.findOne({name: name})
   /* console.log(getname);
   res.send(getname);  */
   if(getname.password === password){
+    
     res.sendFile(path.join(__dirname,'/index.html'));
   }else{
     res.send('password incorrect')
@@ -128,6 +133,8 @@ app.post('/login',async(req,res)=>{
   }catch(err){
     console.log('errorrr',err)
   }
+
+ 
 
   //const getname= await monmodel.findOne({name: name})
   /* console.log(getname);

@@ -12,7 +12,7 @@
                 {
                     id: 1,
                     nombre: 'Course 1',
-                    precio: 200
+                    precio: 1399
                 },
                 {
                     id: 2,
@@ -22,7 +22,7 @@
                 {
                     id: 3,
                     nombre: 'Course 3',
-                    precio: 400
+                    precio: 948
                 },
                 {
                     id: 4,
@@ -32,12 +32,12 @@
                 {
                     id: 5,
                     nombre: 'Course 5',
-                    precio: 500
+                    precio: 590
                 },
                 {
                     id: 6,
                     nombre: 'Course 6',
-                    precio: 2800
+                    precio: 2890
                 },
                 {
                     id: 7,
@@ -72,7 +72,7 @@
                 {
                     id: 13,
                     nombre: 'Course 13',
-                    precio: 650
+                    precio: 648
                 },
                 {
                     id: 14,
@@ -133,7 +133,7 @@
 
             }
 
-            function renderizarCarrito () {
+           /*  function renderizarCarrito () {
                
                 $carrito.textContent = '';
                 
@@ -157,7 +157,7 @@
                     $carrito.appendChild(miNodo);
                 })
             }
-
+ */
             function borrarItemCarrito () {
                 var posicion = this.getAttribute('posicion');
             
@@ -168,7 +168,7 @@
                 calcularTotal();
             }
 
-            function calcularTotal () {
+           /*  function calcularTotal () {
         
                 total = 0;
                
@@ -182,7 +182,7 @@
                 var totalDosDecimales = total.toFixed(2);
                 
                 $total.textContent = totalDosDecimales;
-            }
+            } */
            
             renderItems();
         } 
@@ -195,12 +195,14 @@
             <main id="items" class="col-sm-8 row"></main>
        
             <aside class="col-sm-4">
-               <img src="./cart11.png" alt=""> <h2>Cart</h2>
+               <img src="./cart11.png" alt=""> <h2>Please log in </h2>
+               <a href="./login.html">Login</a>
              
                 <ul id="carrito" class="list-group"></ul>
                 <hr>
             
                 <p class="text-right">Total: <span id="total"></span>&dollar;</p>
+                
             </aside>
         </div>
     </div>
